@@ -25,6 +25,7 @@ Eshell V10.2.3  (abort with ^G)
 ```erlang
 -module(file). % モジュールに対する命名。基本的にファイル名と同じで良いのかな?
 -export([func/1]). % 外部から使用したい関数を列挙(リストなのでおそらく複数記述出来る) /Nは引数の数
+- import(module_name, [func/1, func/2]
 
 somefunc([]) -> 0; % 同名の関数(アリティの数も同じ)をまだ記述する場合には```;```を使用
 somefunc([H|T]) -> somefunc(T). % 終了を宣言する```.```を使用
