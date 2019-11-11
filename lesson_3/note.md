@@ -29,4 +29,17 @@ Eshell V10.2.3  (abort with ^G)
 
 somefunc([]) -> 0; % 同名の関数(アリティの数も同じ)をまだ記述する場合には```;```を使用
 somefunc([H|T]) -> somefunc(T). % 終了を宣言する```.```を使用
+``
+
+## 内包表記
+syntaxについて
+```erlang
+% L = [1,2,3,4,5]
+[X * 2 || X <- L]
+````
+
+generatorを使ってfilterを行う場合
+```erlang
+[X || X <- L, X > 3]
 ```
+
