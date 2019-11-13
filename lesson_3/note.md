@@ -43,3 +43,20 @@ generatorを使ってfilterを行う場合
 [X || X <- L, X > 3]
 ```
 
+## 演算子
+equal -> A =:= B
+
+## record
+goでのstructのようなもの
+.hrlファイルに定義できる模様でgoのstructのように更新が可能(default値も設定出来る)
+```erlang
+-record(todo, {status=online, who=okb, message})
+```
+
+```erlang
+% init record
+X = #{todo}.
+
+% update record
+X1 = X#todo{status=offline}
+```
