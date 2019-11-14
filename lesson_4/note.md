@@ -33,3 +33,13 @@ catch 1 + 1.
              [{file,"shell.erl"},
               {line,627}]}]}}
 ```
+
+## error messageのraise方法
+```erlang:error```としてtextを渡してあげるだけ
+```erlang
+9> erlang:error(niceError).
+** exception error: niceError
+```
+
+## stack traceの確認方法
+```erlang:get_stacktrace()```
