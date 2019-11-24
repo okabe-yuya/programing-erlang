@@ -37,4 +37,22 @@ $ erl -noshell -s fac1 main 25
 factorial 25 = 15511...........
 ```
 
+## Makefileからmoduleをcompileする
+Makefileにcompileする旨を記述していく。基本的にはshellと同じで変数用意して、command叩くみたいな感じ
+baseはprograming erlangのjoe先生のmakefileを参考にすれば良いかと
 
+試しにmakefileを作ってcompileしてみたが出来た(makefile_sampleを参照)
+
+## helpの見方
+```erlang
+$ erl -man init
+```
+
+## 組み込みコマンドを扱う
+```user_default.erl```というファイルを設定して、そこに使用したい関数を列挙する
+
+```erlang
+1> c(user_default)
+2> hello().
+"Hello World"
+```
